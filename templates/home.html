@@ -1,10 +1,20 @@
 <html>
-<head>
+  <head>
     <title>Home</title>
-    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', path='/output.css') }}" rel="stylesheet">
-</head>
-<body>
-    <h1>Home page</h1>
-</body>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', path='/output.css') }}" rel="stylesheet" />
+  </head>
+  <body class="bg-zinc-200">
+    <section class="flex justify-center">
+      <div class="bg-white w-full max-w-3xl lg:my-6 p-8 flex flex-col gap-4">
+        <h1 class="text-center text-4xl font-bold text-indigo-600">BAS</h1>
+        <h1 class="text-center text-2xl">Sistema de Avaliação de Facturas</h1>
+
+        <form action="/" method="post">
+            <label for="current-invoice" class="block">Fatura Atual</label>
+            <input type="file" name="current-invoice" id="current-invoice" class="block">
+        </form>
+      </div>
+    </section>
+  </body>
 </html>
